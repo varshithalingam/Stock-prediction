@@ -9,6 +9,7 @@ file = '/content/drive/MyDrive/ADP-Data.csv'
 df = pd.read_csv(file)
 df.head(5)
 
+
 df.drop(['Unnamed: 0'], axis=1, inplace = True)
 
 import pandas as pd
