@@ -2,11 +2,14 @@
 
 from google.colab import drive
 drive.mount('/content/drive')
+
 import pandas as pd
 file = '/content/drive/MyDrive/ADP-Data.csv'
 df = pd.read_csv(file)
 df.head(5)
+
 df.drop(['Unnamed: 0'], axis=1, inplace = True)
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,6 +18,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 import warnings
+
 warnings.simplefilter("ignore")
 df.info()
 df.select_dtypes('number').describe()
